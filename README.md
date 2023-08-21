@@ -92,7 +92,7 @@ Moreover, our approach is improved each of the examined networks in terms of rob
 | --------------- | ---------------------------------------------------------- | :---: | :------: |
 | RPC             | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.601 |   0.933  |
 | RPC-EPiC        | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.501 |   0.927  |
-| RPC-EPiC        | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.476 |   0.929  |
+| RPC-EPiC+CP++   | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.476 |   0.929  |
 
 
 ## Cite critical_points++
