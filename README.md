@@ -1,5 +1,7 @@
 # Critical Points ++: An Agile Point Cloud Importance Measure for Robust Classification, Adversarial Defense and Explainable AI
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/critical-points-an-agile-point-cloud/point-cloud-classification-on-pointcloud-c)](https://paperswithcode.com/sota/point-cloud-classification-on-pointcloud-c?p=critical-points-an-agile-point-cloud)
+
 Official pytorch implementation of the paper ["Critical Points ++: An Agile Point Cloud Importance Measure for Robust Classification, Adversarial Defense and Explainable AI
 "](https://arxiv.org/abs/2308.05525).
 
