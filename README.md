@@ -16,8 +16,8 @@ Tested on Ubuntu 20.04 LTS using python 3.8.10
 
 ### Step 0. Clone the Repo
 ```shell
-git clone https://github.com/yossilevii100/EPiC.git
-cd EPiC
+git clone https://github.com/yossilevii100/critical_points2.git
+cd critical_points2
 ```
 
 ### Step 1. Set Up the Environment
@@ -57,83 +57,42 @@ data
 ------ list of h5 files
 ```
 
-### Step 3. Download Pretrained Models
+### Step 3.1 Download Pretrained Models - Robust Classiffication
 Download pretrained models by
 ```shell
-gdown https://drive.google.com/uc?id=15Q-YewNGvte8PmteVjTmqE0vzDL3ViJd
-unzip pretrained.zip -d pretrained
+gdown https://drive.google.com/file/d/1iTR9eiGrfQVQENPZoZG-IYwMTkGSb30_/view?usp=sharing
+unzip robust_classification_checkpoint.zip -d pretrained
+cp pretrained robust_classification/pretrained
 ```
-Alternatively, you may download [pretrained models](https://drive.google.com/uc?id=15Q-YewNGvte8PmteVjTmqE0vzDL3ViJd) manually and extract it under root directory.
 
-### Evaluation Commands
-Evaluation commands are provided in [EVALUATE.md](EVALUATE.md).
-
-### Customize EPiC training+evaluation for your custom model
-In order to ease the way for future researchers we implement a placeholder for new custom model.
-All you have to do is implement your custom model in `models/custom/custom_model`
-
-* Augmented by WolfMix:
-
-Train:
+### Step 3.2 Download Pretrained Models - Adversarial Defense
+Download pretrained models by
 ```shell
-python main.py --model custom_model --train_random --train_curves --train_patches --use_wolfmix --exp_name <your_exp_name> --use_wolfmix
+gdown https://drive.google.com/file/d/18nP4-NtnjmPDLccPUDwlifySRbWjGGVz/view?usp=sharing
+unzip shape_invariant_checkpoint.zip -d pretrained
+cp pretrained shape_invariant_attack/checkpoint/ModelNet40
 ```
 
-After the training procedure finished, evaluate your model with EPiC by:
-```shell
-python main.py --model custom_model --eval --model_path_patches <path/to/project>/checkpoints/<your_exp_name>/models/custom_model_patches_wm.t7 --model_path_curves <path/to/project>/checkpoints/<your_exp_name>/models/custom_model_curves_wm.t7 --model_path_random <path/to/project>/checkpoints/<your_exp_name>/models/custom_model_random_wm.t7
-```
 
-* Un-augmented:
-
-Train:
-```shell
-python main.py --model custom_model --train_random --train_curves --train_patches --exp_name <your_exp_name>
-```
-After the training procedure finished, evaluate your model with EPiC by:
-```shell
-python main.py --model custom_model --eval --model_path_patches <path/to/project>/checkpoints/<your_exp_name>/models/custom_model_patches.t7 --model_path_curves <path/to/project>/checkpoints/<your_exp_name>/models/custom_model_curves.t7 --model_path_random <path/to/project>/checkpoints/<your_exp_name>/models/custom_model_random.t7
-```
+Alternatively, you may download [Robust Classiffication pretrained models](https://drive.google.com/file/d/1iTR9eiGrfQVQENPZoZG-IYwMTkGSb30_/view?usp=sharing) or [Adversarial Defense pretrained models](https://drive.google.com/file/d/18nP4-NtnjmPDLccPUDwlifySRbWjGGVz/view?usp=sharing) manually and extract it under root directory.
 
 ### Results on ModelNet-C
 Our method achieves SOTA results on ModelNet-C, with and without augmentation.
 Moreover, our approach is improved each of the examined networks in terms of robustness.
 
-With WolfMix Augmentation
-
 | Method          | Reference                                                  |  mCE  | Clean OA |
 | --------------- | ---------------------------------------------------------- | :---: | :------: |
 | DGCNN           | [Wang et al.](https://arxiv.org/abs/1801.07829)            | 0.590 |   0.932  |
 | DGCNN-EPiC      | [Wang et al.](https://arxiv.org/abs/1801.07829)            | 0.529 |   0.921  |
+| DGCNN-EPiC+CP++ | [Wang et al.](https://arxiv.org/abs/1801.07829)            | 0.484 |   0.929  |
 | --------------- | ---------------------------------------------------------- | :---: | :------: |
 | GDANet          | [Xu et al.](https://arxiv.org/abs/2012.10921)              | 0.571 |   0.934  |
 | GDANet-EPiC     | [Xu et al.](https://arxiv.org/abs/2012.10921)              | 0.530 |   0.925  |
-| --------------- | ---------------------------------------------------------- | :---: | :------: |
-| PCT             | [Guo et al.](https://arxiv.org/abs/2012.09688)             | 0.574 |   0.934  |
-| PCT-EPiC        | [Guo et al.](https://arxiv.org/abs/2012.09688)             | 0.510 |   0.927  |
+| GDANet-EPiC+CP++| [Xu et al.](https://arxiv.org/abs/2012.10921)              | 0.493 |   0.928  |
 | --------------- | ---------------------------------------------------------- | :---: | :------: |
 | RPC             | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.601 |   0.933  |
 | RPC-EPiC        | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.501 |   0.927  |
-
-
-Without WolfMix Augmentation
-
-| Method          | Reference                                                  |  mCE  | Clean OA |
-| --------------- | ---------------------------------------------------------- | :---: | :------: |
-| DGCNN           | [Wang et al.](https://arxiv.org/abs/1801.07829)            | 1.000 |   0.926  |
-| DGCNN-EPiC      | [Wang et al.](https://arxiv.org/abs/1801.07829)            | 0.669 |   0.930  |
-| --------------- | ---------------------------------------------------------- | :---: | :------: |
-| GDANet          | [Xu et al.](https://arxiv.org/abs/2012.10921)              | 0.892 |   0.934  |
-| GDANet-EPiC     | [Xu et al.](https://arxiv.org/abs/2012.10921)              | 0.704 |   0.936  |
-| --------------- | ---------------------------------------------------------- | :---: | :------: |
-| PCT             | [Guo et al.](https://arxiv.org/abs/2012.09688)             | 0.925 |   0.930  |
-| PCT-EPiC        | [Guo et al.](https://arxiv.org/abs/2012.09688)             | 0.646 |   0.930  |
-| --------------- | ---------------------------------------------------------- | :---: | :------: |
-| RPC             | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.863 |   0.930  |
-| RPC-EPiC        | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.750 |   0.936  |
-| --------------- | ---------------------------------------------------------- | :---: | :------: |
-| CurveNet        | [Xiang et al.](https://arxiv.org/abs/2105.01288)           | 0.927 |   0.938  |
-| CurveNet-EPiC   | [Xiang et al.](https://arxiv.org/abs/2105.01288)           | 0.742 |   0.921  |
+| RPC-EPiC        | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.476 |   0.929  |
 
 
 ## Cite critical_points++
