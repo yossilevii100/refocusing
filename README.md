@@ -14,6 +14,10 @@ Our method is based filtering the most prominent points. We achieve state-of-the
 ----
 Tested on Ubuntu 20.04 LTS using python 3.8.10 
 
+## Critical Points++ notebook:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xLl2asGdL1E0PZM7j6QhK3tCl08fBFHI)
+## Get Started
+
 ### Step 0. Clone the Repo
 ```shell
 git clone https://github.com/yossilevii100/critical_points2.git
@@ -60,17 +64,17 @@ data
 ### Step 3.1 Download Pretrained Models - Robust Classiffication
 Download pretrained models by
 ```shell
-gdown https://drive.google.com/file/d/1iTR9eiGrfQVQENPZoZG-IYwMTkGSb30_/view?usp=sharing
+gdown https://drive.google.com/uc?id=1i6bb1_ddNjdiA4tC-9qTaUaw4Lbt9SBx
 unzip robust_classification_checkpoint.zip -d pretrained
-cp pretrained robust_classification/pretrained
+mv pretrained/robust_classification_checkpoint/*.* robust_classification/pretrained
 ```
 
 ### Step 3.2 Download Pretrained Models - Adversarial Defense
 Download pretrained models by
 ```shell
-gdown https://drive.google.com/file/d/18nP4-NtnjmPDLccPUDwlifySRbWjGGVz/view?usp=sharing
+gdown https://drive.google.com/uc?id=1KLtzO3tsbo29qL65f9celYE4HKaUMMsb
 unzip shape_invariant_checkpoint.zip -d pretrained
-cp pretrained shape_invariant_attack/checkpoint/ModelNet40
+mv pretrained/shape_invariant_checkpoint/*.* shape_invariant_attack/checkpoint/ModelNet40
 ```
 
 
