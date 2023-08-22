@@ -21,7 +21,6 @@ A tutorial on Critical Points in general, and on our extensions - Discrete and S
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xLl2asGdL1E0PZM7j6QhK3tCl08fBFHI)
 
-We will add another colab notebook on our applications soon. (Be patient)
 ## Get Started
 
 ### Step 0. Clone the Repo
