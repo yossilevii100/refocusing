@@ -85,6 +85,8 @@ mv pretrained/shape_invariant_checkpoint/*.* shape_invariant_attack/checkpoint/M
 
 Alternatively, you may download [Robust Classiffication pretrained models](https://drive.google.com/file/d/1iTR9eiGrfQVQENPZoZG-IYwMTkGSb30_/view?usp=sharing) or [Adversarial Defense pretrained models](https://drive.google.com/file/d/18nP4-NtnjmPDLccPUDwlifySRbWjGGVz/view?usp=sharing) manually and extract it under root directory.
 
+### RUN
+### Robust Classification
 Robust Classification RUN (only critical points++):
 ```shell
 python main.py --model dgcnn --eval
@@ -94,7 +96,8 @@ Robust Classification RUN (with EPiC):
 python main.py --model dgcnn --eval --use_ensemble --use_ensemble_all
 ```
 
-Adversarial Defenese RUN:
+### Adversarial Defense
+Adversarial Defense RUN:
 ```shell
 python main.py --dataset ModelNet40 --data_path /path/to/data/.../modelnet40_normal_resampled/ --query_attack_method ours  --surrogate_model dgcnn --target_model dgcnn_critical --step_size 0.32
 ```
