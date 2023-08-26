@@ -85,7 +85,7 @@ mv pretrained/shape_invariant_checkpoint/*.* shape_invariant_attack/checkpoint/M
 
 Alternatively, you may download [Robust Classiffication pretrained models](https://drive.google.com/file/d/1iTR9eiGrfQVQENPZoZG-IYwMTkGSb30_/view?usp=sharing) or [Adversarial Defense pretrained models](https://drive.google.com/file/d/18nP4-NtnjmPDLccPUDwlifySRbWjGGVz/view?usp=sharing) manually and extract it under root directory.
 
-### RUN
+## RUN
 ### Robust Classification
 Robust Classification RUN (only critical points++):
 ```shell
