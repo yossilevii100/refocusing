@@ -102,7 +102,7 @@ Adversarial Defense RUN:
 python main.py --dataset ModelNet40 --data_path /path/to/data/.../modelnet40_normal_resampled/ --query_attack_method ours  --surrogate_model dgcnn --target_model dgcnn_critical --step_size 0.32
 ```
 
-### Results on ModelNet-C
+## Results on ModelNet-C
 Our method achieves SOTA results on ModelNet-C, with and without augmentation.
 Moreover, our approach is improved each of the examined networks in terms of robustness.
 
