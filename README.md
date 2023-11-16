@@ -2,10 +2,8 @@
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/critical-points-an-agile-point-cloud/point-cloud-classification-on-pointcloud-c)](https://paperswithcode.com/sota/point-cloud-classification-on-pointcloud-c?p=critical-points-an-agile-point-cloud)
 
-Official pytorch implementation of the paper ["Critical Points ++: An Agile Point Cloud Importance Measure for Robust Classification, Adversarial Defense and Explainable AI
-"](https://arxiv.org/abs/2308.05525).
+Official pytorch implementation of the paper "Robustifying Point Cloud Networks by Refocusing".
 
-Meir Yossef Levi, Guy Gilboa
 
 <img src="./misc/teaser.png" width=600>
 
@@ -121,17 +119,6 @@ Moreover, our approach is improved each of the examined networks in terms of rob
 | RPC-EPiC+CP++   | [Ren et al.](https://arxiv.org/abs/2202.03377) 	           | 0.476 |   0.929  |
 
 
-## Cite critical_points++
-```bibtex
-@article{
-    critical_points++
-    title={Critical Points++: An Agile Point Cloud Importance Measure for Robust Classification, Adversarial Defense and Explainable AI},
-    author={Levi Meir Yossef and Guy Gilboa},
-    journal={arXiv:2308.05525},
-    year={2023},
-}
-```
-
 
 ## Acknowledgement
 This codebase heavily borrows codes from the following repositories:
@@ -142,5 +129,6 @@ This codebase heavily borrows codes from the following repositories:
 - [Shape-Invariant-Attack](https://github.com/shikiw/SI-Adv)
 - [RSMix](https://github.com/dogyoonlee/RSMix)
 - [PointWOLF](https://github.com/mlvlab/PointWOLF)
+- [EPiC](https://github.com/yossilevii100/EPiC)
 
 
