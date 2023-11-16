@@ -5,7 +5,7 @@
 Official pytorch implementation of the paper "Robustifying Point Cloud Networks by Refocusing".
 
 
-<img src="./misc/teaser.png" width=600>
+<img src="./misc/teaser.png" width=800>
 
 We propose a fast and accurate approach to classify point-clouds. Our approach can be implanted to any existing classification network.
 We show superiority on robust classification and adversarial defense. We also leverage our method for XAI and outlier removal. 
