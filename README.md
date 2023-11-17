@@ -1,7 +1,5 @@
 # Robustifying Point Cloud Networks By Refocusing 
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/critical-points-an-agile-point-cloud/point-cloud-classification-on-pointcloud-c)](https://paperswithcode.com/sota/point-cloud-classification-on-pointcloud-c?p=critical-points-an-agile-point-cloud)
-
 Official pytorch implementation of the paper "Robustifying Point Cloud Networks by Refocusing".
 
 
