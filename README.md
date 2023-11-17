@@ -23,7 +23,7 @@ A tutorial on Critical Points in general, and on our extensions - Discrete and S
 
 ### Step 0. Clone the Repo
 ```shell
-git clone https://github.com/yossilevii100/critical_points2.git
+git clone https://github.com/yossilevii100/refocusing.git
 cd critical_points2
 ```
 
