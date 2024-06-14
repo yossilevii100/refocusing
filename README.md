@@ -70,6 +70,8 @@ unzip robust_classification_checkpoint.zip -d pretrained
 mv pretrained/robust_classification_checkpoint/*.* robust_classification/pretrained
 ```
 
+Alternatively, you may download [Robust Classiffication pretrained models](https://drive.google.com/file/d/1xTeDtc9SUyrCodhEhP5K3TOTy3Ons_AO/view?usp=sharing) manually and extract it under root directory.
+
 ### Step 3.2 Download Pretrained Models - Adversarial Defense
 Download pretrained models by
 ```shell
@@ -78,8 +80,9 @@ unzip shape_invariant_checkpoint.zip -d pretrained
 mv pretrained/shape_invariant_checkpoint/*.* shape_invariant_attack/checkpoint/ModelNet40
 ```
 
+Alternatively, you may download [Shape_Invariant pretrained models](https://drive.google.com/file/d/1KLtzO3tsbo29qL65f9celYE4HKaUMMsb/view?usp=drive_link) manually and extract it under root directory.
 
-Alternatively, you may download [Robust Classiffication pretrained models](https://drive.google.com/file/d/1xTeDtc9SUyrCodhEhP5K3TOTy3Ons_AO/view?usp=sharing) manually and extract it under root directory.
+
 
 ## RUN
 ### Robust Classification
